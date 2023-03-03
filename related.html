@@ -36,7 +36,7 @@ function getQueryVariable(variable) {
 }
 var labelArray = [getQueryVariable("label")],
     relatedPostConfig = {
-	homePage: getQueryVariable("url"),	
+	homePage: getQueryVariable("url").split('?')[0],	
         numPosts: 6,
         summaryLength: 0,
         widgetStyle: 3,
