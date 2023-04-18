@@ -87,16 +87,17 @@ var randomRelatedIndex, showRelatedPost;
                 if (q == x.length) {
                     break
                 }
-                t = x[q].title.$t;
+                t = x[q].title.$t;		    
                 console.log(x[q]);
+		    /*
                 w = (d.titleLength !== "auto" && d.titleLength < t.length) ? t.substring(0, d.titleLength) + "&hellip;" : t;
                 r = ("media$thumbnail" in x[q] && d.thumbnailSize !== false) ? x[q].media$thumbnail.url.replace(/\/s[0-9]+(\-c)?/, "/w" + d.thumbnailSize + "-h" + Math.round(d.thumbnailSize * 2 / 3)) : d.noImage;
                 u = ("summary" in x[q] && d.summaryLength > 0) ? x[q].summary.$t.replace(/<br ?\/?>/g, " ").replace(/<.*?>/g, "").replace(/[<>]/g, "").substring(0, d.summaryLength) + "&hellip;" : "";
                 for (var p = 0, a = x[q].link.length; p < a; p++) {
                     v = (x[q].link[p].rel == "alternate") ? x[q].link[p].href : "#"
                 }
-		    
-                c += '<li><a class="related-post-item-title" title="' + t + '" href="' + v + '"' + b + " target='_blank'>" + w + "</a>" + y + "</li>"
+		    */
+                c += '<li style='list-style-type:decimal;padding: 5px 0;font-family:arial;'><a style='text-decoration:none;color:#4cae50' target='_blank'>" + t + "</a></li>"
             }
             s.innerHTML = c += "</ul>" + y;
             d.callBack()
